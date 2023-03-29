@@ -49,6 +49,11 @@ public class Adder implements ActionListener {
     }
 
     public static void main(String[] args) {
+        Toolkit kit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = kit.getScreenSize();
+        int screenWidth = screenSize.width;
+        int screenHeight = screenSize.height;
+        System.out.println(screenHeight + " " + screenWidth);
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new Adder();
